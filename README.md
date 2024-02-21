@@ -1,3 +1,4 @@
-# CISC_4900 Project
+# LibraDex
+CISC 4900 Project
 Spring 2024
 *
