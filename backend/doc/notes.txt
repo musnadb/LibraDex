@@ -1,0 +1,20 @@
+/* mongoose is an Object Data Mondeling (ODM) library that wraps MongoDB with a layer
+    that allows us to read or write db documents and ways to declare models and schemas 
+    ensure a more strict data structure 
+*/    
+
+// MERN
+/*  React -> Express/Node API -> MongoDB 
+    */
+
+// 
+/*  */
+
+// 
+/*  */
+
+// 
+/*  */
+
+// 
+/*  */
