@@ -1,2 +1,2 @@
 # ignore doc/notes.txt
-doc/*.txt
+backend/doc/*.txt
