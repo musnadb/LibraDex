@@ -1,11 +1,12 @@
 import { useEffect, useState } from 'react'
+import { useTestsContext } from '../hooks/useTestsContext'
 
 // components
 import TestDetails from '../components/TestDetails'
 import TestForm from '../components/TestForm'
 
 const Home = () => {
-    const [tests, setTests] = useState(null)
+    
 
     useEffect(() => {        
         const fetchTests = async () => {

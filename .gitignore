@@ -1,5 +1,5 @@
 # ignore doc/notes.txt
-backend/doc/notes.txt
+doc/notes.txt
 # ignore backend/.env files
 backend/.env
 # ignore archive folder
