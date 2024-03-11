@@ -1,10 +1,8 @@
-// file to manage all the receive requests and send responses instead of filling up the server.js file
-// should only contain routes, have controllers in a separate file
+// manages all the routes that will be utilized by server.js
 
-// *
 const express = require('express')
-// Imports from /controllers/testController
-const {
+
+const {         // imports from /controllers/_Controller
     getTests,
     getTest,
     createTest,
@@ -13,20 +11,14 @@ const {
 } = require('../controllers/testController')
 
 
-// Creates an instance of the router
-const router = express.Router()
+const router = express.Router()     // creates an instance of the router
 
 // route handlers
-// GET entries
-router.get('/', getTests)
-// GET a single entry
-router.get('/:id', getTest)
-// POST a new entry
-router.post('/', createTest)
-// DELETE a single entry
-router.delete('/:id', deleteTest)
-// PATCH a single entry
-router.patch('/:id', updateTest)
+router.get('/', getTests)           // GET all entries
+router.get('/:id', getTest)         // GET a single entry
+router.post('/', createTest)        // POST a new entry
+router.delete('/:id', deleteTest)   // DELETE a single entry
+router.patch('/:id', updateTest)    // PATCH a single entry
 
-// send routes from this file to server.js
-module.exports = router
+module.exports = router             // export routes to server.js
+

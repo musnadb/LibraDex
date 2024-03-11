@@ -1,19 +1,17 @@
-const mongoose = require('mongoose')
+const mongoose = require('mongoose')    // function to utilize MongoDB in a more structured approach
 
-// Setting up a schema
-const Schema = mongoose.Schema
+const Schema = mongoose.Schema          // sets up the schema with mongoose
 
-// Defines the structure for the intended model
-const testSchema = new Schema ({
-    title: {
+const testSchema = new Schema ({        // defines the structure of the documents which are saved to the collection
+    title: {                // name of *
         type: String,
         required: true
     },
-    var1: {
+    var1: {                 // *
         type: Number,
         required: true
     },
-    var2: {
+    var2: {                 // *
         type: Number,
         required: true
 
@@ -33,7 +31,7 @@ const testSchema = new Schema ({
     }
 }, { timestamps: true })
 
-// 
-// Model that is applied with the schema will interact with a collection of that name
-// Model name should be singular as it will be pluralized to make a Tests collection
-module.exports = mongoose.model('Test', testSchema)
+// Model name should be singular as it will be pluralized to make a _s collection
+// A model utilizes the collection that follows the given schema from an abstract view
+module.exports = mongoose.model('Test', testSchema)     // creates a model that interacts with the associated collection (1st parameter)
+
