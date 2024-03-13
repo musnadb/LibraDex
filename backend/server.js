@@ -5,6 +5,7 @@ require('dotenv').config()  // loads environment variables (sensitive data) from
 const express = require('express')  // function that utilizes the express package
 const mongoose = require('mongoose')    // function to utilize MongoDB in a more structured approach
 const testRoutes = require('./routes/test') // utilizes the routes created in the routes/_.js file
+const userRoutes = require('./routes/user')
 
 const app = express()   // creates the express app
 
@@ -16,11 +17,9 @@ app.use((req, res, next) => {   // fires for every request that comes in
     next()                              // required to move on to the next request
 })
 
-app.use('/api/test', testRoutes) // attaches the routes to the app
-/* parameters
-        1st indicates the source api
-        2nd indicates the variable that holds the routes under routes/_.js
-    */
+// routes
+app.use('/api/test', testRoutes)    // attaches the routes to the app
+app.use('/api/user', userRoutes)    
 
 mongoose.connect(process.env.MONGO_URI) // sets up a connection to the MongoDB server specified in the .env file
     .then(() => {

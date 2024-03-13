@@ -5,7 +5,7 @@ import { useTestsContext } from '../hooks/useTestsContext'
 import TestDetails from '../components/TestDetails'
 import TestForm from '../components/TestForm'
 
-const Home = () => {
+const Home = () => {        // home page
     const {tests, dispatch} = useTestsContext()     // 
 
     useEffect(() => {       // executes once rendering is finished  
